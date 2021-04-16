@@ -1,0 +1,35 @@
+// templates/index.html
+html
+	head
+		title Comment Contest
+		link(rel='stylesheet' href='https://staticfiles-for-project.theohalpern.repl.co/style.css')
+	body
+		#flexBox
+			ul#scrollToBottemOnLoad
+				each user in users
+					li
+						div
+							= user.comment
+							br
+							a(href="https://www.tiktok.com/" + user.link) 
+								= user.link
+						.minute
+							| Got 
+							span.number=user.likes
+							|  likes in 20 minute.
+
+				li
+			#about
+				h2
+					| Comment Contest Winners
+				p
+					| Go to 
+					a(href="https://www.tiktok.com/") 
+					| to enter and learn about it!
+		script.
+			document.body.scroll({
+				top: 1000000
+			});;
+			document.body.scroll({
+				top: 1000000
+			});;
